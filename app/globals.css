@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 270 50% 60%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 270 50% 60%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glow-text {
+  text-shadow: 0 0 10px rgba(149, 76, 233, 0.7), 0 0 20px rgba(149, 76, 233, 0.5), 0 0 30px rgba(149, 76, 233, 0.3), 0 0
+    40px rgba(149, 76, 233, 0.1);
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px rgba(149, 76, 233, 0.7), 0 0 20px rgba(149, 76, 233, 0.5), 0 0 30px rgba(149, 76, 233, 0.3), 0
+      0 40px rgba(149, 76, 233, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(149, 76, 233, 0.9), 0 0 25px rgba(149, 76, 233, 0.7), 0 0 35px rgba(149, 76, 233, 0.5), 0
+      0 45px rgba(149, 76, 233, 0.3);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(149, 76, 233, 0.7), 0 0 20px rgba(149, 76, 233, 0.5), 0 0 30px rgba(149, 76, 233, 0.3), 0
+      0 40px rgba(149, 76, 233, 0.1);
+  }
+}
